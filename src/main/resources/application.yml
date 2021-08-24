@@ -13,6 +13,6 @@ spring:
     serialization:
       WRITE_DATES_AS_TIMESTAMPS: false
   datasource:
-    url: "jdbc:postgresql://ec2-63-33-14-215.eu-west-1.compute.amazonaws.com/de9b5qj94rkfii"
-    username: "zajprpfudsqjul"
-    password: "3e8278bb2f7bd9526abe49b03a3665fa128b20d5b5615cdcbb23310a49a25f73"
+    url: ${POSTGRES_URL:jdbc:postgresql://localhost:5432/postgres}
+    username: ${POSTGRES_USERNAME:postgres}
+    password: ${POSTGRES_PASSWORD:postgres}
